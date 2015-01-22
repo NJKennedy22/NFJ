@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Member Login</title>
+	<link href="loginForm.css" rel="stylesheet" type="text/css">
+	<!--  <script src="loginscript.js"></script>  -->
+	
+</head>
+<body>
+	<form name="input" method="get">
+	
+	Username: <input type="text" name="user" size="15" maxlength="30"><br>
+	Password: <input type="password" name="password" size="15" maxlength="30"><br>
+	<input type="submit" onClick="validateForm()" value="Submit">
+
+	</form>
+
+	<script>
+	function validateForm() {
+   	
+    
+    <!--CHECK IF USERNAME AND PASSWORD ARE OK --> 
+     if(form.user.value == "myuserid" && form.password.value == "mypassword") {
+                    window.open('http://www.albany.edu/~nk848638/201/PATRICK/members.html')/*opens the target page while Id & password matches*/
+     }
+     else {
+           alert("Error Password or Username is incorrect")/*displays error message*/
+     }
+
+}
+
+
+</script>
+
+
+</body>
