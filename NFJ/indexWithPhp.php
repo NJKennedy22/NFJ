@@ -236,9 +236,32 @@ influence”</em><strong></center></h1>
 				<td> </td>
 				</tr>
 			</table>
-          <p>Since 2007, Harrison and Patrick have been partnering to provide the highest quality fitness services to the Washington
+			
+			<?php
+			$host="localhost"; // Host name 
+			$username="root"; // Mysql username 
+			$password="password"; // Mysql password Edit Profile
+			$db_name="Members"; // Database name 
+			$tbl_name="INVENTORY"; // Table name
+
+			// Connect to server and select database.
+			//mysql_connect("$host", "$username", "$password") or die(mysql_error());
+			$conn = new mysqli ($host, $username, $password, $db_name) ;
+			if($conn->connect_error) {
+				die("Connection failed: " .$conn->connect_error);			
+			}
+			//echo "Connected to MySQL<br />";
+			//mysql_select_db("$db_name") or die(mysql_error());
+			
+			 $sql="SELECT password FROM $tbl_name WHERE username='naomi'";
+			$result=$conn->query($sql);
+			echo "<p>" . $result . "</p>";
+			$conn->close();
+			?>
+          <!--<p>
           DC metro area.  Much of what has allowed them to do this successfully has been their combined curiosity and continued desire
-			to learn, share and grow.  </p>
+			to learn, share and grow.
+			 </p> -->
 			<p>
 			Investigating and discussing a wide range of topics to further understanding, promote curiosity and ultimately improve
 			their standards of practice have been the goals of many of their collaborations.  An enthusiasm to 
