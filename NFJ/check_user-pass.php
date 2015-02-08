@@ -1,6 +1,7 @@
 
 <?php
 ob_start();
+session_start();
 $host="localhost"; // Host name 
 $username="root"; // Mysql username 
 $password="password"; // Mysql password 
@@ -45,11 +46,13 @@ $count=mysql_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
 if ($count==1) {
     echo "Success! $count";
-    header('Location: Membersonly.html');
+    $_SESSION["loggedIn"] = 1;
+    header('Location: Membersonly.php');
 exit;
 } else {
     echo "Unsuccessful! $count";
-		header('Location: index.html');
+    $_SESSION["loggedIn"] = 0;
+		header('Location: index.php');
        exit;
 }
 

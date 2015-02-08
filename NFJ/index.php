@@ -172,7 +172,7 @@ td {
 <nav class="nav right">
 		<ul><strong>
 			<li class="current"><a href="#">HOME</a></li>
-			<li><a href="login.html">MEMBERS</a></li>
+			<li><a href="Membersonly.php">MEMBERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
 
 			</strong>
@@ -186,6 +186,8 @@ td {
 	<h5><center><strong>MISSION<strong><center></h5>
 	
 	<?php
+	session_start();
+
 		include 'HomePageConnect.php';
 		include 'HomePageFuncts.php';
 		$Mission = getContent(1, "Sections", $mysqli);

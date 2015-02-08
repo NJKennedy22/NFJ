@@ -1,4 +1,7 @@
+<?php
+include 'checkLogin.php';
 
+?>
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -159,17 +162,13 @@ h3 {
 </head>
 
 <body>
-    
 	
 	<nav class="nav right">
 		<ul>
 			<li><a href="index.php">Home</a></li>
 			<li class="current"><a href="#">Members</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<!--
-			<li><a href="#">Print Media</a></li>
-			<li><a href="#">Graphic Design</a></li>
-			-->
+			
 		</ul>
 	</nav>
 	<img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
