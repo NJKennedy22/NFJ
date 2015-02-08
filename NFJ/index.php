@@ -174,8 +174,7 @@ td {
 			<li class="current"><a href="#">HOME</a></li>
 			<li><a href="login.html">MEMBERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
-		
-			<li><a href="#">LOG IN</a></li>
+
 			</strong>
 		</ul>
 	</nav>
@@ -185,35 +184,48 @@ td {
 	
 	
 	<h5><center><strong>MISSION<strong><center></h5>
-	<h1><center><strong><em>“To exchange knowledge and ideas, debate questions concerning health, wellness, fitness, nutrition, 
-
-therapy, and sports and to support and improve the practices and businesses of all those that the NFJ can 
-
-influence”</em><strong></center></h1>
+	
+	<?php
+		include 'HomePageConnect.php';
+		include 'HomePageFuncts.php';
+		$Mission = getContent(1, "Sections", $mysqli);
+	   echo "<h1><center><strong><em>
+				\"$Mission\"
+	</em><strong></center></h1>";
 	
 	
 	
-	<div class = "row">
-<div class="large-8 columns">
-			 <h5><strong> &nbsp; WHAT </strong></h5><p>A club of mutual improvement for health, fitness and sports professionals</p>
-          <h5><strong>&nbsp; WHO </strong></h5><p>Anyone in the health, wellness, fitness, nutrition, therapy and sports business</p>
-          <h5><strong> &nbsp;WHEN</strong></h5><p>Two Wednesdays per month, from 11am to 1pm</p>
-          <h5><strong> &nbsp; WHERE </strong></h5><p>The GWU Milken Institute School of Public Health</p>
-        </div>
-        
-        <div class="large-4 columns">
+	echo "<div class = \"row\">";
+	echo "<div class=\"large-8 columns\">";
+	
+			 echo "<h5><strong> &nbsp; WHAT </strong></h5>";
+			 $What =  getContent(2, "Sections", $mysqli);
+			 echo "<p>$What</p>";
+          echo "<h5><strong>&nbsp; WHO </strong></h5>";
+			 $Who =   getContent(3, "Sections", $mysqli);         
+          echo "<p>$Who</p>";
+          echo "<h5><strong> &nbsp;WHEN</strong></h5>";
+          $When =  getContent(4, "Sections", $mysqli);
+          echo  "<p>$When</p>";
+          echo "<h5><strong> &nbsp; WHERE </strong></h5>";
+          $Where =  getContent(5, "Sections", $mysqli);
+          echo "<p>$Where</p>";
+       echo  "</div>";
+		       
+      echo   
+       " <div class=\"large-4 columns\">
         <h2><center><strong>PREVIOUS TOPICS </strong><center></h2>
         		<ul>
         			<li>Nutrition</li>
-        					<audio src="applause.ogg" controls>
+        					<audio src=\"applause.ogg\" controls>
 							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
 							</audio>
         			<li>Evidence Based Practice</li>
-        			      <audio src="applause.ogg" controls>
+        			      <audio src=\"applause.ogg\" controls>
 							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
 							</audio>
         			<li>Methodology & Style</li>
-        			      <audio src="applause.ogg" controls>
+        			      <audio src=\"applause.ogg\" controls>
 							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
 							</audio>
         		</ul>
@@ -221,9 +233,9 @@ influence”</em><strong></center></h1>
         </div>
       </div>
 
-<div class = "row">
+<div class = \"row\">
 
-<div class="large-8 columns">
+<div class=\"large-8 columns\">
 		<h2><center><strong>FOUNDERS</strong></center></h2>
 					<table>
 				<tr>
@@ -231,64 +243,52 @@ influence”</em><strong></center></h1>
 				<td>Harrison Bernstein</td>
 				</tr>
 				<tr>
-				<td><img src = "http://www.albany.edu/~nk848638/201/PATRICK/img/PatrickPic2.jpg"
-				width = "50%" height = "50%" alt = "Patrick" /></td>
+				<td><img src = \"http://www.albany.edu/~nk848638/201/PATRICK/img/PatrickPic2.jpg\"
+				width = \"50%\" height = \"50%\" alt = \"Patrick\" /></td>
 				<td> </td>
 				</tr>
-			</table>
+				<tr>
+				<td>";
+				$PatsInfo = getContent(6, "Sections", $mysqli);
+				echo "$PatsInfo";
+				echo "</td>";
+				echo "<td>";
+				$HarrsInfo = getContent(7, "Sections", $mysqli);
+				echo "$HarrsInfo";
+				echo "</td>";
+				
+			echo "</table>"; 
 			
-			<?php
-			$host="localhost"; // Host name 
-			$username="root"; // Mysql username 
-			$password="password"; // Mysql password Edit Profile
-			$db_name="Members"; // Database name 
-			$tbl_name="INVENTORY"; // Table name
-
-			// Connect to server and select database.
-			//mysql_connect("$host", "$username", "$password") or die(mysql_error());
-			$conn = new mysqli ($host, $username, $password, $db_name) ;
-			if($conn->connect_error) {
-				die("Connection failed: " .$conn->connect_error);			
-			}
-			//echo "Connected to MySQL<br />";
-			//mysql_select_db("$db_name") or die(mysql_error());
+			$Founders1 = getContent(8, "Sections", $mysqli);
+			$Founders2= getContent(9, "Sections", $mysqli);
+			echo "<p>$Founders1 </p> ";
+			echo "<p>$Founders2 </p> ";
 			
-			 $sql="SELECT password FROM $tbl_name WHERE username='naomi'";
-			$result=$conn->query($sql);
-			echo "<p>" . $result . "</p>";
-			$conn->close();
-			?>
-          <!--<p>
-          DC metro area.  Much of what has allowed them to do this successfully has been their combined curiosity and continued desire
-			to learn, share and grow.
-			 </p> -->
-			<p>
-			Investigating and discussing a wide range of topics to further understanding, promote curiosity and ultimately improve
-			their standards of practice have been the goals of many of their collaborations.  An enthusiasm to 
-			invite other open-minded professionals to join them in this pursuit is what inspired the creation of The National Fitness Junto.
-			</p>
-		
-        </div>
+	
+       echo " </div>
         
-<div class="large-4 columns">
+<div class=\"large-4 columns\">
 
 	<h2><center><strong>FUTURE TOPICS<strong><center></h2>
-			
-
-          <p>2/4/15: Coaching Expectations</p>
+			";
+			$FutTopics = getContent(10, "Sections", $mysqli);
+          echo "<p>$FutTopics</p>" ;
       
-        </div>
-      </div>
+        echo "</div>";
+      echo "</div>
       
-<div class = "row">
+<div class = \"row\">
 
 
 	
   
-        <div class="large-12 columns">
+        <div class=\"large-12 columns\">
         <h2><center><strong>OUR MEMBERS<strong><center></h2>
-
-          <p>Take me to your leader! Switzerland is small and neutral! We are more like Germany, ambitious and misunderstood! And so we say goodbye to our beloved pet, Nibbler, who’s gone to a place where I, too, hope one day to go. The toilet. Anyhoo, your net-suits will allow you to experience Fry’s worm infested bowels as if you were actually wriggling through them.</p>
+";
+			$Members = getContent(11, "Sections", $mysqli);	
+         echo " <p>$Members</p>";
+         
+         ?>
         <img src = "http://www.albany.edu/~nk848638/201/PATRICK/img/thoughtBubbles.jpg" alt = "thought bubbles" />
         <img src = "http://www.albany.edu/~nk848638/201/PATRICK/img/handsWithGears.jpg" alt= "Hands with Gears" />        
         </div>
