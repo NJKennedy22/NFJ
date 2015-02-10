@@ -47,7 +47,13 @@ $count=mysql_num_rows($result);
 if ($count==1) {
     echo "Success! $count";
     $_SESSION["loggedIn"] = 1;
+    	if ($username == "PRahm")
+    		{
+				header('Location: admin.php');    		
+    		}
+    	else {
     header('Location: Membersonly.php');
+		 }	
 exit;
 } else {
     echo "Unsuccessful! $count";

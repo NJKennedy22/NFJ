@@ -1,19 +1,24 @@
-<!DOCTYPE html>
+<?php
+	include 'checkLogin.php';
+	
+	
+	
+	?>
+	<!DOCTYPE HTML>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel = "stylesheet" href = "../zurb/css/normalize.css">
-		<link type="text/css" rel = "stylesheet" href = "../zurb/css/foundation.css">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link type="text/css" rel = "stylesheet" href = "zurb/css/normalize.css">
+		<link type="text/css" rel = "stylesheet" href = "zurb/css/foundation.css">
 		<meta charset="UTF-8">	
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="js/vendor/modernizr.js"></script>
-		
-		<!--[if lt IE 9]>
-		<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
 
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
 
 <style>
 body {
@@ -34,10 +39,21 @@ a {
 a:hover {
 	color: #F60;
 }
-h1, h2, h3 {
+h1 {
 	color: #000;
 	line-height: 120%;
 	margin: 30px 0 10px;
+}
+h2 {
+	color: black;
+	
+	
+}
+h5 {
+	background-color: black;
+	color: white;
+	border-radius: 5px;
+	letter-spacing: 5px;
 }
 h1 {
 	font-size: 1.7em;
@@ -46,10 +62,21 @@ h1 {
 h2 {
 	font-size: 1.4em;
 	border-top: solid 1px #eee;
-	padding-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: 2px solid;
+	border-color: #070303 #ffffff #ffffff #ffffff;
+	border-width: 3px 0px 0px 0px;
+	letter-spacing: 5px;
 }
 h3 {
 	font-size: 1.1em;
+}
+
+/*table */
+td {
+	text-align: center;
+	width: 50%;
 }
 
 /* nav */
@@ -141,32 +168,40 @@ h3 {
 
 
 	
-}
+
 </style>
 </head>
 
 <body>
-    
-	
-	<nav class="nav right">
-		<ul>
-			<li><a href="index.php">Home</a></li>
-			<li class="current"><a href="#">Members</a></li>
-			<li><a href="#">Contact Us</a></li>
+
+<nav class="nav right">
+		<ul><strong>
+			<li class="current"><a href="#">HOME</a></li>
+			<li><a href="Membersonly.php">MEMBERS</a></li>
+			<li><a href="#">CONTACT US</a></li>
+
+			</strong>
 		</ul>
 	</nav>
 	
+	 <img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
+	
+	
+	<h5><center><strong>MISSION<strong><center></h5>
+	
+	<?php
+	session_start();
 
-<br><br>
-<form action="check_user-pass.php" method="POST">
-
-Username: <input type="text" name="username" value="  ">    <!--value instead of placeholder leaves the text till person erases-->
-<br><br>
-Password: <input type="password" name="password" value="  ">
-<br>
-<input type="submit" name="submit" value="Login!">
-<br>
-</form>
-<img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
+		include 'HomePageConnect.php';
+		include 'HomePageFuncts.php';
+		$Mission = getContent(1, "Sections", $mysqli);
+	   echo "<h1><center><strong><em>
+				\"$Mission\"
+	</em><strong></center></h1>";
+	?>
+	<form action = "sampleForm.php" id="1">
+	 <button type=\"button\">Click Here to change Mission</button> 
+	 </form>
+	
 </body>
 </html>

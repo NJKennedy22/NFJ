@@ -1,5 +1,6 @@
     <?php
     session_start();
+    
     if(isset($_SESSION['loggedIn'])) 
 	{
 		if($_SESSION['loggedIn'] == 0) {
