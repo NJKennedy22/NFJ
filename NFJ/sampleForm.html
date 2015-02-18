@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<title>Admin</title>		
+		</head>
+		<body>
+<?php
+	
+	include 'HomePageConnect.php';
+	include 'HomePageFuncts.php';	
+	
+	$Mission = getContent(1, "Sections", $mysqli);
+	
+	if ($_SERVER["REQUEST_METHOD"] == "POST") {
+		 $newMission = $_POST["newMission"];	
+	
+	 $newMissionQuery = "UPDATE Sections WHERE id = 1 SET Content = replace(Content, '$Mission', '$newMission')";
+    $newMissionResult = mysqli_query($newMissionQuery);  
+    }
+	?>		
+		
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+First name:<br>
+<input type="text" name="firstname" value="Mission">
+<br>
+Last name:<br>
+<input type="text" name="lastname" value="Mouse">
+<br><br>
+<input type="submit" value="Submit">
+</form>		
+		
+		
+		</body>
+		</html>

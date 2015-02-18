@@ -199,8 +199,8 @@ td {
 				\"$Mission\"
 	</em><strong></center></h1>";
 	?>
-	<form action = "sampleForm.php" id="1">
-	 <button type=\"button\">Click Here to change Mission</button> 
+	<form action = "sampleForm.php">
+	 <button type=\"button\">Click Here to change your Homepage</button> 
 	 </form>
 	
 </body>

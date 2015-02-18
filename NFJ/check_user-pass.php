@@ -49,7 +49,8 @@ if ($count==1) {
     $_SESSION["loggedIn"] = 1;
     	if ($username == "PRahm")
     		{
-				header('Location: admin.php');    		
+    			$_SESSION["admin"] = true; 			
+				header('Location: index.php');    		
     		}
     	else {
     header('Location: Membersonly.php');

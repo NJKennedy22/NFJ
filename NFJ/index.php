@@ -174,6 +174,7 @@ td {
 		<ul><strong>
 			<li class="current"><a href="#">HOME</a></li>
 			<li><a href="Membersonly.php">MEMBERS</a></li>
+			<li><a href="Founders.html">FOUNDERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
 
 			</strong>
@@ -184,13 +185,18 @@ td {
     <img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
 	
 	
-	<h5><center><strong>MISSION<strong><center></h5>
-	
 	<?php
-	session_start();
 
-		include 'HomePageConnect.php';
+    include 'homePageButton.php';
+    include 'HomePageConnect.php';
 		include 'HomePageFuncts.php';
+	echo " <h5><center><strong>MISSION<strong><center></h5>";  
+
+		
+		
+		
+			
+		
 		$Mission = getContent(1, "Sections", $mysqli);
 	   echo "<h1><center><strong><em>
 				\"$Mission\"
@@ -239,31 +245,11 @@ td {
 <div class = \"row\">
 
 <div class=\"large-8 columns\">
-		<h2><center><strong>FOUNDERS</strong></center></h2>
-					<table>
-				<tr>
-				<td>Patrick Rahm</td>
-				<td>Harrison Bernstein</td>
-				</tr>
-				<tr>
-				<td><img src = \"http://www.albany.edu/~nk848638/201/PATRICK/img/PatrickPic2.jpg\"
-				width = \"50%\" height = \"50%\" alt = \"Patrick\" /></td>
-				<td> </td>
-				</tr>
-				<tr>
-				<td>";
-				$PatsInfo = getContent(6, "Sections", $mysqli);
-				echo "$PatsInfo";
-				echo "</td>";
-				echo "<td>";
-				$HarrsInfo = getContent(7, "Sections", $mysqli);
-				echo "$HarrsInfo";
-				echo "</td>";
+		<h2><center><strong>OUR STORY </strong></center></h2> ";
 				
-			echo "</table>"; 
 			
-			$Founders1 = getContent(8, "Sections", $mysqli);
-			$Founders2= getContent(9, "Sections", $mysqli);
+			$Founders1 = getContent(6, "Sections", $mysqli);
+			$Founders2 = getContent(7, "Sections", $mysqli);
 			echo "<p>$Founders1 </p> ";
 			echo "<p>$Founders2 </p> ";
 			
@@ -274,7 +260,7 @@ td {
 
 	<h2><center><strong>FUTURE TOPICS<strong><center></h2>
 			";
-			$FutTopics = getContent(10, "Sections", $mysqli);
+			$FutTopics = getContent(8, "Sections", $mysqli);
           echo "<p>$FutTopics</p>" ;
       
         echo "</div>";
@@ -288,7 +274,7 @@ td {
         <div class=\"large-12 columns\">
         <h2><center><strong>OUR MEMBERS<strong><center></h2>
 ";
-			$Members = getContent(11, "Sections", $mysqli);	
+			$Members = getContent(9, "Sections", $mysqli);	
          echo " <p>$Members</p>";
          
          ?>
