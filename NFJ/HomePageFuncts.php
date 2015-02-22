@@ -1,5 +1,4 @@
-
-		<?php
+<?php
 		
 			function getContent($id, $tbl_name, $mysqli)  {			
 		   	 $string="SELECT Content FROM $tbl_name WHERE id='$id'";
@@ -11,5 +10,5 @@
 			$result2 = mysqli_fetch_assoc($result);
 			return $result2['Content'];
 		}
-			?>
+?>
 		

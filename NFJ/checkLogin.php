@@ -1,14 +1,7 @@
-    <?php
-  
-    session_start();
-    
-    if(isset($_SESSION['loggedIn'])) 
-	{
-		if($_SESSION['loggedIn'] == 0) {
-			header('Location: login.html');		
-		}	
+<?php    
+    if(!isset($_COOKIE["Username"])) 
+	{		
+	    	header("Location: login.html");
+	exit;
 	}
-else {
-	header('Location: login.html');
-}
 ?>

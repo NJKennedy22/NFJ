@@ -1,6 +1,5 @@
 <?php
 include 'checkLogin.php';
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -169,9 +168,10 @@ h3 {
 			<li class="current"><a href="#">Members</a></li>
 			<li class="Founders.html"><a href="#">Founders</a></li>
 			<li><a href="#">Contact Us</a></li>
-			
+			<li><a href = "logout.php">Logout</a></li>
 		</ul>
 	</nav>
+	<a href ="changePassForm.html">Change Password</a>	
 	<img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
   <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vo65u6os28mi1vfbd7olb97oi0%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	
@@ -203,17 +203,11 @@ h3 {
       <div class = "row">
 <div class="large-8 columns">
 	
-		<fieldset>
-			<legend>Contact details</legend>		
-			<label>Email: 				</label>	<br>
-			
 		
-		
-		</fieldset>
      </div>
         
         <div class="large-4 columns">
-		
+				
       </div>
 
 

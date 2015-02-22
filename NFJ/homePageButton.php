@@ -1,10 +1,12 @@
 	<?php
-	session_start();
-	if(isset($_SESSION['admin']))
+    
+    if(isset($_COOKIE["Username"])) 
 	{
-		if($_SESSION['admin'] == true)
-			{
-			 echo "<a href= \"sampleForm.php\">Admin Form </a> ";
+		
+		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) { 
+			echo "	<a href \"changeHomePage.php\" >Change Page</a> ";
+		}	
+	
 	}
-}
+
 ?>
