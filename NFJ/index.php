@@ -1,4 +1,3 @@
-
 <!--comment-->
 <!DOCTYPE HTML>
 <html>
@@ -176,6 +175,10 @@ td {
 			<li><a href="Membersonly.php">MEMBERS</a></li>
 			<li><a href="Founders.html">FOUNDERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
+<?php
+			include 'Buttons.php';
+			homePageButton();
+			?>
 
 			</strong>
 		</ul>
@@ -186,8 +189,6 @@ td {
 	
 	
 	<?php
-
-    include 'homePageButton.php';
     include 'HomePageConnect.php';
 		include 'HomePageFuncts.php';
 	echo " <h5><center><strong>MISSION<strong><center></h5>";  

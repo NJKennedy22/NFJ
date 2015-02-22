@@ -1,20 +1,5 @@
-
 <?php
-ob_start();
-session_start();
-$host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password="password"; // Mysql password 
-$db_name="Members"; // Database name 
-$tbl_name="INVENTORY"; // Table name
-
-// Connect to server and select database.
-mysql_connect("$host", "$username", "$password") or die(mysql_error());
-echo "Connected to MySQL<br />";
-mysql_select_db("$db_name") or die(mysql_error());
-echo "Connected to Database<br />";
-// Check $username and $password 
-
+include 'membersConnect.php';
 if(empty($_POST['username']))
 {
     echo "UserName/Password is empty!";
@@ -30,39 +15,36 @@ if(empty($_POST['password']))
 // Define $username and $password 
 $username=$_POST['username']; 
 $password=$_POST['password'];
+$tbl_name = "Members";
 
-
+/*
 // To protect MySQL injection (more detail about MySQL injection)
 $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
+*/ 
 
-$sql="SELECT * FROM $tbl_name WHERE username='$username' and password='$password'";
-$result=mysql_query($sql);
 
+$sql= "SELECT * FROM $tbl_name WHERE Username = \"$username\" and Password = \"$password\"";
+$result = $mysqli->query($sql);
+
+$mysqli->close();
 // Mysql_num_row is counting table row
-$count=mysql_num_rows($result);
+// $count=mysql_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
-if ($count==1) {
-    echo "Success! $count";
-    $_SESSION["loggedIn"] = 1;
-    	if ($username == "PRahm")
-    		{
-    			$_SESSION["admin"] = true; 			
-				header('Location: index.php');    		
-    		}
-    	else {
-    header('Location: Membersonly.php');
-		 }	
-exit;
+if ($result->num_rows > 0) {
+    $time = time()+10*60;
+    
+  $cookie_name="Username";
+  $cookie_value = $username;
+  setcookie($cookie_name, $cookie_value, $time, "/");
+	  		header('Location: Membersonly.php');
+	  		//echo "Accessing Members Only Page";
+	  		
 } else {
-    echo "Unsuccessful! $count";
-    $_SESSION["loggedIn"] = 0;
-		header('Location: index.php');
-       exit;
+		header('Location: login.html');
 }
 
-ob_end_flush();
 ?>
 
