@@ -167,6 +167,7 @@ h3 {
 		<ul>
 			<li><a href="index.php">Home</a></li>
 			<li class="current"><a href="#">Members</a></li>
+			<li class="Founders.html"><a href="#">Founders</a></li>
 			<li><a href="#">Contact Us</a></li>
 			
 		</ul>
