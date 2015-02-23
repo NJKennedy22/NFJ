@@ -1,5 +1,5 @@
 <?php
-include 'checkLogin.php';
+include '/home/naomij5/public_html/NFJ/php/checkLogin.php';
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -30,148 +30,21 @@ include 'checkLogin.php';
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<style>
-body {
-	font: 90%/160% Arial, Helvetica, sans-serif;
-	color: #666;
-	width: 900px;
-	max-width: 96%;
-	margin: 0 auto;
-}
-p {
-	margin: 0 0 20px;
-}
-
-a {
-	color: #69C;
-	text-decoration: none;
-}
-a:hover {
-	color: #F60;
-}
-h1, h2, h3 {
-	color: #000;
-	line-height: 120%;
-	margin: 30px 0 10px;
-}
-h1 {
-	font-size: 1.7em;
-	color: #000;
-}
-h2 {
-	font-size: 1.4em;
-	border-top: solid 1px #eee;
-	padding-top: 20px;
-}
-h3 {
-	font-size: 1.1em;
-}
-
-/* nav */
-.nav {
-	margin: 20px 0;
-}
-.nav ul {
-	margin: 0;
-	padding: 0;
-}
-.nav li {
-	margin: 0 5px 10px 0;
-	padding: 0;
-	list-style: none;
-	display: inline-block;
-	*display:inline; /* ie7 */
-}
-.nav a {
-	padding: 3px 12px;
-	text-decoration: none;
-	color: #999;
-	line-height: 100%;
-}
-.nav a:hover {
-	color: #000;
-}
-.nav .current a {
-	background: #999;
-	color: #fff;
-	border-radius: 5px;
-}
-
-/* right nav */
-.nav.right ul {
-	text-align: right;
-}
-
-
-@media screen and (max-width: 600px) {
-	.nav {
-		position: relative;
-		min-height: 40px;
-	}	
-	.nav ul {
-		width: 180px;
-		padding: 5px 0;
-		position: absolute;
-		top: 0;
-		left: 0;
-		border: solid 1px #aaa;
-		background: #fff url(images/icon-menu.png) no-repeat 10px 11px;
-		border-radius: 5px;
-		box-shadow: 0 1px 2px rgba(0,0,0,.3);
-	}
-	.nav li {
-		display: none; /* hide all <li> items */
-		margin: 0;
-	}
-	.nav .current {
-		display: block; /* show only current <li> item */
-	}
-	.nav a {
-		display: block;
-		padding: 5px 5px 5px 32px;
-		text-align: left;
-	}
-	.nav .current a {
-		background: none;
-		color: #666;
-	}
-
-	/* on nav hover */
-	.nav ul:hover {
-		background-image: none;
-	}
-	.nav ul:hover li {
-		display: block;
-		margin: 0 0 5px;
-	}
-	.nav ul:hover .current {
-		background: url(images/icon-check.png) no-repeat 10px 7px;
-	}
-
-	/* right nav */
-	.nav.right ul {
-		left: auto;
-		right: 0;
-	}
-
-
-	
-}
-</style>
+<link rel="stylesheet" type="text/css" href = "http://www.naomijkennedy.com/NFJ/css/styles.css">
 </head>
 
 <body>
 	
 	<nav class="nav right">
 		<ul>
-			<li><a href="index.php">Home</a></li>
+			<li><a href="http://www.naomijkennedy.com/NFJ/index.php">Home</a></li>
 			<li class="current"><a href="#">Members</a></li>
-			<li class="Founders.html"><a href="#">Founders</a></li>
+			<li><a href= "http://www.naomijkennedy.com/NFJ/html/Founders.html">Founders</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li><a href = "logout.php">Logout</a></li>
+			<li><a href = "http://www.naomijkennedy.com/NFJ/php/logout.php">Logout</a></li>
 		</ul>
 	</nav>
-	<a href ="changePassForm.html">Change Password</a>	
+	<a href ="http://www.naomijkennedy.com/NFJ/html/changePassForm.html">Change Password</a>	
 	<img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
   <iframe src="https://www.google.com/calendar/embed?height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=vo65u6os28mi1vfbd7olb97oi0%40group.calendar.google.com&amp;color=%235229A3&amp;ctz=America%2FNew_York" style=" border-width:0 " width="800" height="600" frameborder="0" scrolling="no"></iframe>
 	
@@ -225,3 +98,4 @@ h3 {
 	
 </body>
 </html>
+

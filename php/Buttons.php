@@ -3,7 +3,7 @@
     if(isset($_COOKIE["Username"])) 
 	{		
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) { 
-			echo "<li><a href= \"changeHomePage.php\" >Change Homepage</a></li>";
+			echo "<li><a href= \"http://www.naomijkennedy.com/NFJ/php/changeHomePage.php\" >Change Homepage</a></li>";
 		}	
 	}
 }

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Admin</title>		
+			<title>Admin</title>
+		<link rel="stylesheet" type="text/css" href = "http://www.naomijkennedy.com/NFJ/css/styles.css">		
 		</head>
 		<body>
-		
 <?php
 	
-	include 'HomePageConnect.php';
-	include 'HomePageFuncts.php';	
+	include '/home/naomij5/public_html/NFJ/php/HomePageConnect.php';
+	include '/home/naomij5/public_html/NFJ/php/Functs.php';	
 	
 	$Mission = getContent(1, "Sections", $mysqli);
 	
@@ -111,7 +111,7 @@
 	
 	if ($_SERVER["REQUEST_METHOD"] == "POST") { 
 	$newMembers=$_POST['newMembers'];
-	 $newMembersQuery = "UPDATE Sections SET Content = '$newMembers' WHERE id = 7";
+	 $newMembersQuery = "UPDATE Sections SET Content = '$newMembers' WHERE id = 9";
     $newMembersResult = $mysqli->query($newMembersQuery);  
     $Members = $newMembers;
  

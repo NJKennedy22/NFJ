@@ -1,5 +1,5 @@
 <?php
-include 'membersConnect.php';
+include '/home/naomij5/public_html/NFJ/php/membersConnect.php';
 if(empty($_POST['username']))
 {
     echo "UserName/Password is empty!";
@@ -39,12 +39,13 @@ if ($result->num_rows > 0) {
   $cookie_name="Username";
   $cookie_value = $username;
   setcookie($cookie_name, $cookie_value, $time, "/");
-	  		header('Location: Membersonly.php');
+	  		header('Location: http://www.naomijkennedy.com/NFJ/php/Membersonly.php');
 	  		//echo "Accessing Members Only Page";
 	  		
 } else {
-		header('Location: login.html');
+		header('Location: http://www.naomijkennedy.com/NFJ/html/login.html');
 }
 
 ?>
+
 
