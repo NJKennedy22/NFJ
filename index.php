@@ -25,7 +25,7 @@
 		<ul><strong>
 			<li class="current"><a href="#">HOME</a></li>
 			<li><a href="http://www.naomijkennedy.com/NFJ/php/Membersonly.php">MEMBERS</a></li>
-			<li><a href="http://www.naomijkennedy.com/NFJ/html/Founders.html">FOUNDERS</a></li>
+			<li><a href="http://www.naomijkennedy.com/NFJ/php/Founders.php">FOUNDERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
 <?php
 			include '/home/naomij5/public_html/NFJ/php/Buttons.php';
@@ -73,23 +73,12 @@
 		       
       echo   
        " <div class=\"large-4 columns\">
-        <h2><center><strong>PREVIOUS TOPICS </strong><center></h2>
-        		<ul>
-        			<li>Nutrition</li>
-        					<audio src=\"applause.ogg\" controls>
-							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
-							</audio>
-        			<li>Evidence Based Practice</li>
-        			      <audio src=\"applause.ogg\" controls>
-							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
-							</audio>
-        			<li>Methodology & Style</li>
-        			      <audio src=\"applause.ogg\" controls>
-							<p>You cannot hear this track because this browser does not support our Flash music player.</p>
-							</audio>
-        		</ul>
+        <h2><center><strong>PREVIOUS TOPICS </strong><center></h2>";
+        	$PreviousTopics = getContent(10,"Sections", $mysqli);
+        	echo "<p>$PreviousTopics</p>";
+        		
           
-        </div>
+       echo " </div>
       </div>
 
 <div class = \"row\">
@@ -145,5 +134,6 @@
 	
 </body>
 </html>
+
 
 
