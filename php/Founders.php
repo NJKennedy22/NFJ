@@ -4,14 +4,14 @@
 	   $PatricksBio = getContent(11, "Sections", $mysqli);
 ?>
 <!DOCTYPE html>
-	<html> 
+	<html>
 		<head>
-			<title>Founders</title> 
+			<title>Founders</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" rel = "stylesheet" href = "../zurb/css/normalize.css">
 		<link type="text/css" rel = "stylesheet" href = "../zurb/css/foundation.css">
-		<meta charset="UTF-8">	
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="js/vendor/modernizr.js"></script>
 
@@ -35,31 +35,31 @@
 			</strong>
 		</ul>
 	</nav>
-	
+
 
     <img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
-	
-	
-	
- 
+
+
+
+
   <div class="row">
         <div class="large-3 columns">
-        
-        
-     
 
-<img src = "http://www.naomijkennedy.com/NFJ/images/<?php 
+
+
+
+<img src = "http://www.naomijkennedy.com/NFJ/images/<?php
  $PatrickPic = getImage("Patrick", "Images", $mysqli);
-echo "$PatrickPic"; 
+echo "$PatrickPic";
 ?>"
 alt = "Patrick Rahm" />
 
 
 
     <!--   <img src = "http://www.naomijkennedy.com/NFJ/images/PatrickPic2.jpg" alt = "Patrick Rahm" /> -->
-        
+
         </div>
-        <div class ="large-9 columns">	
+        <div class ="large-9 columns">
         	<p>
         	<strong>Patrick Rahm MS CSCS HFI USAW</strong>
         	<br>
@@ -75,19 +75,19 @@ Co-Founder of The National Fitness Junto<br><br>
  </p>
         </div>
  </div>
- <h2><center><strong>      </strong></center></h2> 
- 
+ <h2><center><strong>      </strong></center></h2>
+
  <div class = "row">
 			<div class ="large-3 columns">
 
 
-<img src = "http://www.naomijkennedy.com/NFJ/images/<?php 
+<img src = "http://www.naomijkennedy.com/NFJ/images/<?php
  $HarrisonPic = getImage("Harrison", "Images", $mysqli);
-echo "$HarrisonPic"; 
+echo "$HarrisonPic";
 ?>"
-alt = "Harrison Bernstein" />				
-		
-			</div> 
+alt = "Harrison Bernstein" />
+
+			</div>
 			<div class ="large-9 columns">
 				<p><strong>Harrison Bernstein CSCS</strong>
 				 <br>
@@ -98,17 +98,13 @@ Co-Founder of The National Fitness Junto<br><br>
 &emsp;	In 2004 Harrison partnered with Georgetown Strength and Conditioning Coach Augie Maurelli to create SiSu Systems. Together they built a web-based multi-relational database that managed the strength and conditioning progress of all athletes at Georgetown. Eventually, Randolph Macon College and Johns Hopkins would use the system as well.  While improving the SiSu System, Harrison was simultaneously providing speed and strength instruction, for all sports at Georgetown University, Johns Hopkins University Football and Basketball, Catholic University Lacrosse, Men’s Basketball, Women’s Basketball, Baseball and Softball, and the Washington Redskins.  <br>
 &emsp;	Two years later, Harrison declined a permanent position at Georgetown to continue private business and pursue opportunities with select private clientele and the Washington Redskins. Based on the fundamentals learned at Georgetown and SiSu Systems, Satori Sports was created by Harrison to focus on coaching.  <br>
 &emsp;	In 2006, Harrison began teaching in the Masters Program of Exercise Science at George Washington University.  Harrison teamed up with Patrick Rahm to spearhead the growth of Satori Sports.  Over the past 9 years, Satori has grown to coach many pro athletes, local high school athletes, and fitness enthusiasts.  As Satori Sports grew, Harrison accepted a full time coaching position with the Washington Redskins in 2007.  Over three years with the Redskins, Harrison has learned some of the best coaching techniques from Joe Gibbs, Joe Bugel, Al Saunders, Gregg Williams, Bill Khayat and so many other great Redskins coaches.  <br>
-&emsp; After leaving the Redskins, Harrison returned to Satori Sports and George Washington University while simultaneously coaching high school football.  Harrison has held football positions at Gonzaga College High School and currently coaches at Bishop O’Connell High School as Assistant Head Football Coach, Special Teams Coordinator and Defensive Backs Coach.  From the knowledge and experience gained over the past 15 years, Harrison has become an expert Coach, Businessman, Speaker, Seminar Leader, and Teacher. The National Fitness Junto fuels Harrison’s passion for learning and creates a platform for sports and fitness professionals to openly share their indiscriminate thoughts and expertise on the industry’s most fascinating topics. 
+&emsp; After leaving the Redskins, Harrison returned to Satori Sports and George Washington University while simultaneously coaching high school football.  Harrison has held football positions at Gonzaga College High School and currently coaches at Bishop O’Connell High School as Assistant Head Football Coach, Special Teams Coordinator and Defensive Backs Coach.  From the knowledge and experience gained over the past 15 years, Harrison has become an expert Coach, Businessman, Speaker, Seminar Leader, and Teacher. The National Fitness Junto fuels Harrison’s passion for learning and creates a platform for sports and fitness professionals to openly share their indiscriminate thoughts and expertise on the industry’s most fascinating topics.
 	<br><br><br>
 
- </p>			
+ </p>
 			</div>
-  
+
  </div>
 
 </body>
 </html>        
-
-
-
-

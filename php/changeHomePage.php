@@ -7,7 +7,8 @@
 		<body>
 <nav class="nav right">
 		<ul><strong>
-			<li class="current"><a href="#">HOME</a></li>
+			<li class="http://www.naomijkennedy.com/NFJ/index.php"><a href="#">HOME</a></li>
+
 			<li><a href="http://www.naomijkennedy.com/NFJ/php/Membersonly.php">MEMBERS</a></li>
 			<li><a href="http://www.naomijkennedy.com/NFJ/php/Founders.php">FOUNDERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
