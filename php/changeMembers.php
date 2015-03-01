@@ -5,6 +5,16 @@
 		<link rel="stylesheet" type="text/css" href = "http://www.naomijkennedy.com/NFJ/css/styles.css">
 		</head>
 		<body>
+<nav class="nav right">
+		<ul><strong>
+			<li><a href="http://www.naomijkennedy.com/NFJ/index.php">HOME</a></li>
+
+			<li><a href="http://www.naomijkennedy.com/NFJ/php/Membersonly.php">MEMBERS</a></li>
+			<li><a href="http://www.naomijkennedy.com/NFJ/php/Founders.php">FOUNDERS</a></li>
+			<li><a href="#">CONTACT US</a></li>
+			</strong>
+		</ul>
+	</nav>
 <?php
 
 	include '/home/naomij5/public_html/NFJ/php/SoundsConnect.php';
