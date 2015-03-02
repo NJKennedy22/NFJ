@@ -1,7 +1,7 @@
 <?php
-include '/home/naomij5/public_html/NFJ/php/checkLogin.php';
-include '/home/naomij5/public_html/NFJ/php/SoundsConnect.php';
-include '/home/naomij5/public_html/NFJ/php/Functs.php';
+include 'includes/checkLogin.php';
+include 'includes/SoundsConnect.php';
+include 'includes/Functs.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -10,7 +10,7 @@ include '/home/naomij5/public_html/NFJ/php/Functs.php';
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link type="text/css" rel = "stylesheet" href = "../zurb/css/normalize.css">
-		<link type="text/css" rel = "stylesheet" href = "../zurb/css/foundation.css">
+		<link type="text/css" rel = "stylesheet" href = "zurb/css/foundation.css">
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script src="js/vendor/modernizr.js"></script>
@@ -33,7 +33,7 @@ include '/home/naomij5/public_html/NFJ/php/Functs.php';
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" type="text/css" href = "http://www.naomijkennedy.com/NFJ/css/styles.css">
+<link rel="stylesheet" type="text/css" href = "includes/styles.css">
 
 </head>
 
@@ -41,14 +41,14 @@ include '/home/naomij5/public_html/NFJ/php/Functs.php';
 
 	<nav class="nav right">
 		<ul>
-			<li><a href="http://www.naomijkennedy.com/NFJ/index.php">Home</a></li>
+			<li><a href="index.php">Home</a></li>
 			<li class="current"><a href="#">Members</a></li>
-			<li><a href= "http://www.naomijkennedy.com/NFJ/php/Founders.php">Founders</a></li>
+			<li><a href= "Founders.php">Founders</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li><a href = "http://www.naomijkennedy.com/NFJ/php/logout.php">Logout</a></li>
+			<li><a href = "includes/logout.php">Logout</a></li>
 		</ul>
 	</nav>
-	<a href ="http://www.naomijkennedy.com/NFJ/html/changePassForm.html">Change Password</a>
+
 	<img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
 
 	<div class = "row">
@@ -72,7 +72,7 @@ $soundName = getSound($id, "sounds", $mysqli);
 echo "
 <tr>
 	<td>$nameAnddate</td>
-	<td><audio src=\"http://www.naomijkennedy.com/NFJ/audio/$soundName\"
+	<td><audio src=\"audio/$soundName\"
 	controls>
     <p>You cannot hear this track because this browser does not support our Flash music player.</p>
 		</audio>
@@ -87,7 +87,7 @@ echo "
 </table>
 
 
-
+<a href ="forms/changePassForm.html">Change Password</a>
 
   <!--
 <p>What did you think?</p>

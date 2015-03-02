@@ -1,5 +1,5 @@
 <?php
-include 'membersConnect.php';
+include '../includes/membersConnect.php';
 $UserName = $_POST['username'];  //Users username
 $old_password = $_POST["old_password"];
 $newpassword = $_POST['newpassword'];

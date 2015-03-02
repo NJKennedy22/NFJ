@@ -1,34 +1,37 @@
 <?php
-	 include '/home/naomij5/public_html/NFJ/php/HomePageConnect.php';
-	include '/home/naomij5/public_html/NFJ/php/Functs.php';
-	   $PatricksBio = getContent(11, "Sections", $mysqli);
+	include 'includes/HomePageConnect.php';
+	include 'includes/Functs.php';
+
+	$PatrickPic = getImage("Patrick", "Images", $mysqli);
+	$HarrisonPic = getImage("Harrison", "Images", $mysqli);
+
 ?>
 <!DOCTYPE html>
 	<html>
 		<head>
 			<title>Founders</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link type="text/css" rel = "stylesheet" href = "../zurb/css/normalize.css">
-		<link type="text/css" rel = "stylesheet" href = "../zurb/css/foundation.css">
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="js/vendor/modernizr.js"></script>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link type="text/css" rel = "stylesheet" href = "zurb/css/normalize.css">
+			<link type="text/css" rel = "stylesheet" href = "zurb/css/foundation.css">
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<script src="js/vendor/modernizr.js"></script>
 
-<!--[if lt IE 9]>
-	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+		<!--[if lt IE 9]>
+		<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
 
-<link rel="stylesheet" type="text/css" href = "http://www.naomijkennedy.com/NFJ/css/styles.css">
-</head>
+		<link rel="stylesheet" type="text/css" href = "includes/styles.css">
+		</head>
 
 <body>
 
 <nav class="nav right">
 		<ul><strong>
-			<li><a href="http://www.naomijkennedy.com/NFJ/index.php">HOME</a></li>
-			<li><a href="http://www.naomijkennedy.com/NFJ/php/Membersonly.php">MEMBERS</a></li>
+			<li><a href="index.php">HOME</a></li>
+			<li><a href="./Membersonly.php">MEMBERS</a></li>
 			<li class = "current"><a href="#">FOUNDERS</a></li>
 			<li><a href="#">CONTACT US</a></li>
 
@@ -38,25 +41,13 @@
 
 
     <img height = "300" width = "700" src="http://www.albany.edu/~nk848638/201/PATRICK/img/polkadotsNFJ.jpg"  alt = "our logo"/>
-
-
-
-
   <div class="row">
         <div class="large-3 columns">
 
-
-
-
-<img src = "http://www.naomijkennedy.com/NFJ/images/<?php
- $PatrickPic = getImage("Patrick", "Images", $mysqli);
+<img src = "images/<?php
 echo "$PatrickPic";
 ?>"
 alt = "Patrick Rahm" />
-
-
-
-    <!--   <img src = "http://www.naomijkennedy.com/NFJ/images/PatrickPic2.jpg" alt = "Patrick Rahm" /> -->
 
         </div>
         <div class ="large-9 columns">
@@ -75,14 +66,12 @@ Co-Founder of The National Fitness Junto<br><br>
  </p>
         </div>
  </div>
- <h2><center><strong>      </strong></center></h2>
 
  <div class = "row">
-			<div class ="large-3 columns">
+	<div class ="large-3 columns">
 
 
-<img src = "http://www.naomijkennedy.com/NFJ/images/<?php
- $HarrisonPic = getImage("Harrison", "Images", $mysqli);
+<img src = "images/<?php
 echo "$HarrisonPic";
 ?>"
 alt = "Harrison Bernstein" />

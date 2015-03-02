@@ -3,7 +3,7 @@
     if(isset($_COOKIE["Username"]))
 	{
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "<li><a href= \"http://www.naomijkennedy.com/NFJ/php/changeHomePage.php\" >Change Homepage</a></li>";
+			echo "<li><a href= \"admin/changeHomePage.php\" >Change Homepage</a></li>";
 		}
 	}
 }
@@ -13,7 +13,7 @@
 	{
 
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "	<li><a href = \"http://www.naomijkennedy.com/NFJ/php/changeMembers.php\" >Change Members Page</a></li> ";
+			echo "	<li><a href = \"admin/changeMembers.php\" >Change Members Page</a></li> ";
 		}
 
 	}
@@ -24,7 +24,7 @@
 	{
 
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "<li><a href = \"changeFounders.php\" >Change Founders Page</a> </li>";
+			echo "<li><a href = \"admin/changeFounders.php\" >Change Founders Page</a> </li>";
 		}
 
 	}
@@ -35,7 +35,7 @@
 	{
 
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "	<li><a href = \"changeContact.php\" >Change Contact Page</a></li> ";
+			echo "	<li><a href = \"admin/changeContact.php\" >Change Contact Page</a></li> ";
 		}
 
 	}

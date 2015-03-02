@@ -1,5 +1,5 @@
 <?php
-include '/home/naomij5/public_html/NFJ/php/membersConnect.php';
+include 'membersConnect.php';
 if(empty($_POST['username']))
 {
     echo "UserName/Password is empty!";
@@ -12,8 +12,8 @@ if(empty($_POST['password']))
 }
 
 
-// Define $username and $password 
-$username=$_POST['username']; 
+// Define $username and $password
+$username=$_POST['username'];
 $password=$_POST['password'];
 $tbl_name = "Members";
 
@@ -23,7 +23,7 @@ $username = stripslashes($username);
 $password = stripslashes($password);
 $username = mysql_real_escape_string($username);
 $password = mysql_real_escape_string($password);
-*/ 
+*/
 
 
 $sql= "SELECT * FROM $tbl_name WHERE Username = \"$username\" and Password = \"$password\"";
@@ -35,17 +35,15 @@ $mysqli->close();
 // If result matched $username and $password, table row must be 1 row
 if ($result->num_rows > 0) {
     $time = time()+10*60;
-    
+
   $cookie_name="Username";
   $cookie_value = $username;
   setcookie($cookie_name, $cookie_value, $time, "/");
-	  		header('Location: http://www.naomijkennedy.com/NFJ/php/Membersonly.php');
+	  		header('Location: ../Membersonly.php');
 	  		//echo "Accessing Members Only Page";
-	  		
+
 } else {
-		header('Location: http://www.naomijkennedy.com/NFJ/html/login.html');
+		header('Location: ../forms/login.html');
 }
 
 ?>
-
-

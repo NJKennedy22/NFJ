@@ -1,5 +1,5 @@
 <?php
-$target_dir = "/home/naomij5/public_html/NFJ/audio/";
+$target_dir = "../audio/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $audioFileType = pathinfo($target_file,PATHINFO_EXTENSION);
