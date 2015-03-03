@@ -41,4 +41,34 @@
 	}
 }
 /**********************************************************************************/
+    function logoutButton() {
+    if(isset($_COOKIE["Username"]))
+	{
+
+		echo "	<li><a href = \"includes/logout.php\" >Logout</a></li> ";
+
+	}
+}
+/**************************************************************************************/
+    function newUserButton() {
+    if(isset($_COOKIE["Username"]))
+	{
+
+		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
+			echo "	<li><a href = \"forms/addAMember.php\" >Add a new member</a></li> ";
+		}
+
+	}
+}
+/**************************************************************************************/
+    function newSoundButton() {
+    if(isset($_COOKIE["Username"]))
+	{
+
+		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
+			echo "	<li><a href = \"forms/addASound.php\" >Add a new audio</a></li> ";
+		}
+
+	}
+}
 ?>

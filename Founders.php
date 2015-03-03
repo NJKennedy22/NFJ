@@ -1,6 +1,7 @@
 <?php
 	include 'includes/HomePageConnect.php';
 	include 'includes/Functs.php';
+	include 'includes/Buttons.php';
 
 	$PatrickPic = getImage("Patrick", "Images", $mysqli);
 	$HarrisonPic = getImage("Harrison", "Images", $mysqli);
@@ -33,7 +34,13 @@
 			<li><a href="index.php">HOME</a></li>
 			<li><a href="./Membersonly.php">MEMBERS</a></li>
 			<li class = "current"><a href="#">FOUNDERS</a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li><a href="contactUs.php">CONTACT US</a></li>
+			
+			<?php
+			homePageButton();
+			membersButton();
+			logoutButton();
+			?>
 
 			</strong>
 		</ul>

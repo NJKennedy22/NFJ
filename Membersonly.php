@@ -2,6 +2,7 @@
 include 'includes/checkLogin.php';
 include 'includes/SoundsConnect.php';
 include 'includes/Functs.php';
+include 'includes/Buttons.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -44,8 +45,12 @@ include 'includes/Functs.php';
 			<li><a href="index.php">Home</a></li>
 			<li class="current"><a href="#">Members</a></li>
 			<li><a href= "Founders.php">Founders</a></li>
-			<li><a href="#">Contact Us</a></li>
-			<li><a href = "includes/logout.php">Logout</a></li>
+			<li><a href="contactUs.php">Contact Us</a></li>
+			<?php
+			homePageButton();
+			membersButton();
+			logoutButton();
+			?>
 		</ul>
 	</nav>
 
@@ -66,12 +71,14 @@ $query = "SELECT * from sounds";
 $rownum = $mysqli->query($query)->num_rows;
 
 for ($id = $rownum; $id >= 1; $id--) {
-$nameAnddate = getNameAndDate($id, "sounds", $mysqli);
+$name = getName($id, "sounds", $mysqli);
+$date = getDateAudio($id, "sounds", $mysqli);
 $soundName = getSound($id, "sounds", $mysqli);
 
 echo "
 <tr>
-	<td>$nameAnddate</td>
+	<td>$name : $date</td>
+
 	<td><audio src=\"audio/$soundName\"
 	controls>
     <p>You cannot hear this track because this browser does not support our Flash music player.</p>

@@ -14,7 +14,7 @@
 		$Founders2 = getContent(7, "Sections", $mysqli);
 		$FutTopics = getContent(8, "Sections", $mysqli);
 		$Members = getContent(9, "Sections", $mysqli);
-		$PreviousTopics = getContent(10,"Sections", $mysqli);
+$mysqli->close();
 
 
 ?>
@@ -45,10 +45,15 @@
 			<li class="current"><a href="#">HOME</a></li>
 			<li><a href="Membersonly.php">MEMBERS</a></li>
 			<li><a href="Founders.php">FOUNDERS</a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li><a href="contactUs.php">CONTACT US</a></li>
+			
 			<?php
 			homePageButton();
 			membersButton();
+			newUserButton();
+			newSoundButton();
+			logoutButton();
+			
 			?>
 
 
@@ -86,10 +91,34 @@
 
 	 <div class="large-4 columns">
         <h2><center><strong>PREVIOUS TOPICS </strong><center></h2>
+<p>
+        <?php
+        include 'includes/audioConnect.php';
+	$rowresult = $mysqli->query("SELECT * FROM sounds");
+	$num_rows = $rowresult->num_rows;	
 
-        <p><?php echo "$PreviousTopics" ?></p>
 
-
+	if($num_rows >= 5)
+		{
+		for($id = $num_rows; $id >= $num_rows - 4; $id--)
+			{
+			$name = getName($id, "sounds", $mysqli);
+			$date = getDateAudio($id, "sounds", $mysqli);
+			echo "$date : $name <br>"; 
+		
+			}
+		} 
+	else {
+		for($id = $num_rows; $id >0; $id--)
+			{
+			$name = getName($id, "sounds", $mysqli);
+			$date = getDateAudio($id, "sounds", $mysqli);
+			echo "$date : $name <br>"; 
+			}
+		}
+		
+	$mysqli->close();	
+	?>  </p>
       </div>
       </div>
 
@@ -122,8 +151,7 @@
 
           <p><?php echo "$Members" ?></p>
 
-        <img src = "http://www.albany.edu/~nk848638/201/PATRICK/img/thoughtBubbles.jpg" alt = "thought bubbles" />
-        <img src = "http://www.albany.edu/~nk848638/201/PATRICK/img/handsWithGears.jpg" alt= "Hands with Gears" />
+        
         </div>
       </div>
 

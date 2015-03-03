@@ -1,6 +1,7 @@
 <?php
 	include '../includes/HomePageConnect.php';
 	include '../includes/Functs.php';
+	include '../includes/Buttons.php';
 
 	$Mission = getContent(1, "Sections", $mysqli);
 	$What = getContent(2, "Sections", $mysqli);
@@ -26,7 +27,12 @@
 
 			<li><a href="../Membersonly.php">MEMBERS</a></li>
 			<li><a href="../Founders.php">FOUNDERS</a></li>
-			<li><a href="#">CONTACT US</a></li>
+			<li><a href="../contactUs.php">CONTACT US</a></li>
+			<li><a href = "includes/logout.php">Logout</a></li>
+			<?php
+			homePageButton();
+			membersButton();
+			?>
 			</strong>
 		</ul>
 	</nav>

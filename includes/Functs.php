@@ -35,8 +35,8 @@
 		}
 
 
-		function getNameAndDate($id, $tbl_name, $mysqli)  {
-		   	 $string="SELECT nameAnddate FROM $tbl_name WHERE id='$id'";
+		function getName($id, $tbl_name, $mysqli)  {
+		   	 $string="SELECT name FROM $tbl_name WHERE id='$id'";
 
 			   	$result = $mysqli->query($string);
 			if($result->num_rows  == 0) {
@@ -44,6 +44,18 @@
 
 			}
 			$result2 = mysqli_fetch_assoc($result);
-			return $result2['nameAnddate'];
+			return $result2['name'];
+		}
+		
+		function getDateAudio($id, $tbl_name, $mysqli)  {
+		   	 $string="SELECT date FROM $tbl_name WHERE id='$id'";
+
+			   	$result = $mysqli->query($string);
+			if($result->num_rows  == 0) {
+				echo "didnt work";
+
+			}
+			$result2 = mysqli_fetch_assoc($result);
+			return $result2['date'];
 		}
 ?>
