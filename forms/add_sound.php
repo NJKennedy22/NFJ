@@ -9,10 +9,15 @@ $sql= "SELECT * FROM $tbl_name WHERE soundUrl = \"$audioPath\"";
 $result = $mysqli->query($sql);
 
 if($result->num_rows==0){
-  echo 'audio file not already used';
+ 
 
 } else {
-  echo 'that audio file is already used';
+  
+	$time = time()+10*60;
+  	 $cookie_name="audioInDb";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
 }
 $rowresult = $mysqli->query("SELECT * FROM $tbl_name");
 $num_rows = $rowresult->num_rows;
@@ -28,10 +33,20 @@ if ($result->num_rows == 0)
 
 			$newaudio = "INSERT INTO $tbl_name (id, soundUrl, name, date) VALUES ('$nextID', '$audioPath', '$audioName', '$audioDate')";
 			$newaudioresult = $mysqli->query($newaudio);
-			echo "Success!";
+			
+		 $time = time()+10*60;
+  		 $cookie_name="Yes";
+  		$cookie_value = " ";
+ 		 setcookie($cookie_name, $cookie_value, $time, "/");
+ 		 header ('Location: ../admin/changeMembers.php');
 			}
 			else {
-				echo "Cannot leave fields blank";
+				
+		$time = time()+10*60;
+  		 $cookie_name="noBlanks";
+  		$cookie_value = " ";
+ 		 setcookie($cookie_name, $cookie_value, $time, "/");
+ 		 header ('Location: ../admin/changeMembers.php');
 			      }
 
 	}

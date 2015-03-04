@@ -4,13 +4,12 @@
 	include '../includes/Buttons.php';
 	include '../includes/audioConnect.php';
 	include '../includes/formPrint.php'; 
-	include '../includes/imageConnect.php';
 ?>
 
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Admin Members</title>
+			<title>Admin Founders</title>
 			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -40,20 +39,17 @@
 			</strong>
 		</ul>
 	</nav>
-
 <?php
 	printForms($value);
 ?>
 
-<form action="../includes/upload.php" method="post" enctype="multipart/form-data">
+<form action="../includes/uploadImage.php" method="post" enctype="multipart/form-data">
    <br><br><br>
-   Select audio to upload:
+   Select image to upload for Patrick:
     <input type="file" name="fileToUpload" id="fileToUpload">
-    Audio Name: <input type="text" name="audioName" value" ">
+    Image Name: <input type="text" name="imageName" value" ">
 <br>
-Date of Meeting: <input type = "text" name = "audioDate" value " ">
 
-<br>
     
     <input type="submit" value="Upload Audio" name="submit">
 </form>

@@ -1,10 +1,17 @@
+<?php
+		include '../includes/formPrint.php';
+		?>
 <!DOCTYPE html>
 	<html>
 		<head>
 			<title>Change Password</title>
 		</head>
 		<body>
-
+		<?php
+		
+		
+printForms($value);
+?>
 <form action="../forms/change_password.php" method="POST">
 
 Username: <input type="text" name="username" placeholder="username">

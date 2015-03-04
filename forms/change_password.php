@@ -13,20 +13,36 @@ $result=$mysqli->query($sql);
 // Mysql_num_row is counting table row
 //$count=mysql_num_rows($result);
 // If result matched $username and $password, table row must be 1 row
-if ($result->num_rows > 0)
+if ($result->num_rows > 0) 
 	{
 		if($newpassword == $confirmnewpassword)
 		{
-			$newpass = "UPDATE $tbl_name SET Password = replace(PASSWORD, '$old_password', '$newpassword')";
+		$row=mysqli_fetch_assoc($result);
+		$id = $row["id"];
+			$newpass = "UPDATE $tbl_name SET Password = \"$newpassword\" WHERE id = $id";
 			$newpassresult = $mysqli->query($newpass);
-			echo "Success!";
+			$time = time()+10*60;
+  		 $cookie_name="Yes";
+  		$cookie_value = " ";
+ 		 setcookie($cookie_name, $cookie_value, $time, "/");
+ 		 header ('Location: changePassForm.php');
+ 		 alert("Password successfully changed!");
 		}
 		else {
-			echo "Both new passwords must match";
+			$time = time()+10*60;
+  		 $cookie_name="passNoMatch";
+  		$cookie_value = " ";
+ 		 setcookie($cookie_name, $cookie_value, $time, "/");
+ 		 header ('Location: changePassForm.php');
+ 		 
 		}
 	}
 else {
-    echo "Password does not match Username";
+    	$time = time()+10*60;
+  		 $cookie_name="wrongUserPass";
+  		$cookie_value = " ";
+ 		 setcookie($cookie_name, $cookie_value, $time, "/");
+ 		 header ('Location: changePassForm.php');
 }
 
 $mysqli->close();

@@ -26,16 +26,13 @@
 		
 <nav class="nav right">
 		<ul><strong>
-			<li><a href="index.php">HOME</a></li>
-			<li><a href="Membersonly.php">MEMBERS</a></li>
-			<li><a href="Founders.php">FOUNDERS</a></li>
-			<li><a href="contactUs.php">CONTACT US</a></li>
+			<li><a href="../index.php">HOME</a></li>
+			<li><a href="../Membersonly.php">MEMBERS</a></li>
+			<li><a href="../Founders.php">FOUNDERS</a></li>
+			<li><a href="../contactUs.php">CONTACT US</a></li>
 			
 			<?php
-			homePageButton();
-			membersButton();
-			newUserButton();
-			logoutButton();
+		
 			
 			
 			printForms($value);

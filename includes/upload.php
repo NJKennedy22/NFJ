@@ -24,23 +24,39 @@ if(isset($_POST["submit"])) {
 
 // Check if file already exists
 if (file_exists($target_file)) {
-    echo "Sorry, file already exists.";
+    $time = time()+10*60;
+  	 $cookie_name="audioInDb";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
     $uploadOk = 0;
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 512000000) {
-    echo "Sorry, your file is too large.";
+    $time = time()+10*60;
+  	 $cookie_name="fileTooLarge";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
     $uploadOk = 0;
 }
 // Allow certain file formats
 if($audioFileType != "mp3" && $audioFileType != "m4a" )
  {
-    echo "Sorry, only mp3, m4a files are allowed.";
+    $time = time()+10*60;
+  	 $cookie_name="fileTypeError";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
     $uploadOk = 0;
 }
 // Check if $uploadOk is set to 0 by an error
 if ($uploadOk == 0) {
-    echo "Sorry, your file was not uploaded.";
+    $time = time()+10*60;
+  	 $cookie_name="No";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
@@ -52,20 +68,31 @@ $nextID = $num_rows + 1;
 			if($audioName != "" && $audioDate != "" ) {
 			
 			$fileToUpload = basename($_FILES["fileToUpload"]["name"]);
-			echo "xxx $fileToUpload xxx";
 			$newaudio = "INSERT INTO $tbl_name (id, soundUrl, name, date) VALUES ('$nextID', '$fileToUpload', '$audioName', '$audioDate')";
 			$newaudioresult = $mysqli->query($newaudio);
-			echo "Success!";
+			$time = time()+10*60;
+  	 $cookie_name="Yes";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
 			}
 			else {
-				echo "Cannot leave fields blank";
+				$time = time()+10*60;
+  	 $cookie_name="noBlanks";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
 			      }
 
 
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
 
     } else {
-        echo "Sorry, there was an error uploading your file.";
+        $time = time()+10*60;
+  	 $cookie_name="No";
+  	$cookie_value = " ";
+ 	 setcookie($cookie_name, $cookie_value, $time, "/");
+ 	 header ('Location: ../admin/changeMembers.php');
     }
 }
 $mysqli->close();

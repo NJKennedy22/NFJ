@@ -17,8 +17,22 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>Admin</title>
+			<title>Admin HomePage</title>
+			<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link type="text/css" rel = "stylesheet" href = "../zurb/css/normalize.css">
+		<link type="text/css" rel = "stylesheet" href = "../zurb/css/foundation.css">
+		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href = "../includes/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="js/vendor/modernizr.js"></script>
+
+<!--[if lt IE 9]>
+	<script src="http://css3-mediaqueries-js.googlecode.com/files/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+		
 		</head>
 		<body>
 <nav class="nav right">
@@ -28,11 +42,8 @@
 			<li><a href="../Membersonly.php">MEMBERS</a></li>
 			<li><a href="../Founders.php">FOUNDERS</a></li>
 			<li><a href="../contactUs.php">CONTACT US</a></li>
-			<li><a href = "includes/logout.php">Logout</a></li>
-			<?php
-			homePageButton();
-			membersButton();
-			?>
+			
+			
 			</strong>
 		</ul>
 	</nav>
@@ -111,38 +122,40 @@
 		<!---------------------------------------------------------------------------------------->
 		<form method = "POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 		<br>
+		<br><br><br>
 
+Mission:
+<textarea name="newMission" rows="6" cols ="60"><?php echo $Mission;?></textarea> 
+<br>
+What:
+<textarea name="newWhat" rows="3" cols ="60"><?php echo $What;?></textarea> 
+<br>
+Who:
+<textarea name="newWho" rows="3" cols ="60"><?php echo $Who;?></textarea> 
+<br>
+When:
+<textarea name="newWhen" rows="3" cols ="60"><?php echo $When;?></textarea>
+<br>
+Where:
+<textarea name="newWhere" rows="3" cols ="60"><?php echo $Where;?></textarea> 
+<br>
+First Founders Paragraph:
+<textarea name="newFounders1" rows="5" cols ="60"><?php echo $Founders1;?></textarea>
+<br>
+Second Founders Paragraph: 
+<textarea name="newFounders2" rows="5" cols ="60"><?php echo $Founders2;?></textarea> 
+<br>
 
-<textarea name="newMission" rows="6" cols ="60"><?php echo $Mission;?></textarea> Mission
-<br><br>
-
-<textarea name="newWhat" rows="3" cols ="60"><?php echo $What;?></textarea> What
-<br><br>
-
-<textarea name="newWho" rows="3" cols ="60"><?php echo $Who;?></textarea> Who
-<br><br>
-
-<textarea name="newWhen" rows="3" cols ="60"><?php echo $When;?></textarea> When
-<br><br>
-
-<textarea name="newWhere" rows="3" cols ="60"><?php echo $Where;?></textarea> Where
-<br><br>
-
-<textarea name="newFounders1" rows="5" cols ="60"><?php echo $Founders1;?></textarea> First founders paragraph
-<br><br>
-
-<textarea name="newFounders2" rows="5" cols ="60"><?php echo $Founders2;?></textarea> Second founders paragraph
-<br><br>
-
-<textarea name="newPreviousTopics" rows="5" cols ="60"><?php echo $PreviousTopics;?></textarea> Previous Topics
-<br><br>
-
-<textarea name="newFutureTopics" rows="5" cols ="60"><?php echo $FutureTopics;?></textarea> Future Topics
-<br><br>
-
-<textarea name="newMembers" rows="5" cols ="60"><?php echo $Members;?></textarea> Members
+Future Topics: 
+<textarea name="newFutureTopics" rows="5" cols ="60"><?php echo $FutureTopics;?></textarea> 
+<br>
+Members:
+<textarea name="newMembers" rows="5" cols ="60"><?php echo $Members;?></textarea> 
 <br><br>
 <input type="submit" value="Submit">
+<br>
+<br>
+<br>
 </form>
 
 

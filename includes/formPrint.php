@@ -66,34 +66,61 @@ $value = 0;
   $value = 7;  
 
 	}
+ if(isset($_COOKIE["fileTooLarge"])) 
+	{
+	$time = time()-10*60;
+   $cookie_name="fileTooLarge";
+  $cookie_value = " ";
+  setcookie($cookie_name, $cookie_value, $time, "/");
+  $value = 8;  
+
+	}
+	 if(isset($_COOKIE["fileTypeError"])) 
+	{
+	$time = time()-10*60;
+   $cookie_name="fileTypeError";
+  $cookie_value = " ";
+  setcookie($cookie_name, $cookie_value, $time, "/");
+  $value = 8;  
+
+	}
+
 	function printForms($output) {
 		if($output == 1)
 		{
-		echo "<p style \"color:red\">Incorrect Username or Password</p>";
+		echo "<p style= \"color:red\">Incorrect Username or Password</p>";
 		}
 		if($output == 2)
 		{
-		echo "<p style \"color:red\">Passwords must match</p>";
+		echo "<p style =\"color:red\">Passwords must match</p>";
 		}
 		if($output == 3)
 		{
-		echo "<p style \"color:red\">Username already exists</p>";
+		echo "<p style= \"color:red\">Username already exists</p>";
 		}
 		if($output == 4)
 		{
-		 echo "<p style \"color:red\">Audio file already exists</p>";
+		 echo "<p style= \"color:red\">Audio file already exists</p>";
 		}
 		if($output == 5)
 		{
-		 echo "<p style \"color:red\">Must fill out all fields</p>";
+		 echo "<p style= \"color:red\">Must fill out all fields</p>";
 		}
 		if($output == 6)
 		{
-		echo "<p style \"color:green\">Success!</p>";
+		echo "<p style= \"color:green\">Success!</p>";
 		}
 		if($output == 7)
 		{
-		  echo "<p style \"color:red\">Unsuccessful</p>";
+		  echo "<p style= \"color:red\">Unsuccessful</p>";
+		}
+		if($output == 8)
+		{
+		  echo "<p style= \"color:red\">File is too large</p>";
+		}
+		if($output == 9)
+		{
+		  echo "<p style =\"color:red\">File must either be mp3 or m4a</p>";
 		}
 	
 	}

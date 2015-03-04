@@ -25,8 +25,10 @@ if ($result->num_rows == 0)
 		if($password == $confirmnewpassword)
 		{
 			if($password != "" && $UserName != "") {
-			
-			$newuser = "INSERT INTO $tbl_name (Username, Password) VALUES ('$UserName', '$password')";
+			$rowresult = $mysqli->query("SELECT * FROM $tbl_name");
+			$num_rows = $rowresult->num_rows;
+			$nextID = $num_rows + 1;
+			$newuser = "INSERT INTO $tbl_name (Username, Password, id) VALUES ('$UserName', '$password', $nextID)";
 			$newuserresult = $mysqli->query($newuser);
 				$time = time()+10*60;
   				 $cookie_name="Yes";

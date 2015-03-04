@@ -13,7 +13,7 @@
 	{
 
 		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "	<li><a href = \"admin/changeMembers.php\" >Change Members Page</a></li> ";
+			echo "	<li><a href = \"admin/changeMembers.php\" >Add Audio</a></li> ";
 		}
 
 	}
@@ -61,14 +61,5 @@
 	}
 }
 /**************************************************************************************/
-    function newSoundButton() {
-    if(isset($_COOKIE["Username"]))
-	{
 
-		if(!strcmp( $_COOKIE['Username'] , "PRahm") || !strcmp( $_COOKIE['Username'] , "HBernstein")) {
-			echo "	<li><a href = \"forms/addASound.php\" >Add a new audio</a></li> ";
-		}
-
-	}
-}
 ?>
